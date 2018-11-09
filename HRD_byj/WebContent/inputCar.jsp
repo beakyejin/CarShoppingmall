@@ -43,7 +43,7 @@
 		</tr>
 		<tr>
 			<th>등록번호</th>
-			<td><input type="text" name="c_no" value="${maxNo}"></td>
+			<td><input type="text" name="c_no" value="${maxNo}" readonly></td>
 		</tr>
 		<tr>
 			<th>차량회사</th>
@@ -52,14 +52,14 @@
 				<%if(comList !=null && comList.size()>0){
 					for(CompanyVO vo : comList){%>
 					<option value="<%=vo.getCom_no()%>"><%=vo.getCom_name() %></option>
-					<%}
-					}%>
+				<%	}
+				}%>
 				</select>
 			</td>
 		</tr>
 		<tr>
 			<th>차량 이름</th>
-			<td><input type="text" name="c_name"></td>
+			<td><input type="text" name="c_name" maxlength="20"></td>
 		</tr>
 		<tr>
 			<th>차  종</th>
@@ -74,11 +74,11 @@
 		</tr>
 		<tr>
 			<th>차량 가격</th>
-			<td><input type="text" name="c_price"></td>
+			<td><input type="text" name="c_price" maxlength="10"></td>
 		</tr>
 		<tr>
 			<th>배기량</th>
-			<td><input type="text" name="c_cc"></td>
+			<td><input type="text" name="c_cc" maxlength="5"></td>
 		</tr>
 		<tr>
 			<td colspan="2">
